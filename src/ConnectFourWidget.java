@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 public class ConnectFourWidget extends JPanel implements SpotListener, ActionListener {
 
 	private enum Player {
-		BLACK, RED
+		BLUE, RED
 	};
 
 	private ConnectFourSpotBoard board;
@@ -88,9 +88,9 @@ public class ConnectFourWidget extends JPanel implements SpotListener, ActionLis
 
 		if (s.isEmpty()) {
 
-			if (next_to_play == Player.BLACK) {
-				player_color = Color.BLACK;
-				player_name = "Black";
+			if (next_to_play == Player.BLUE) {
+				player_color = Color.BLUE;
+				player_name = "Blue";
 				next_player_name = "Red";
 				next_to_play = Player.RED;
 
@@ -98,8 +98,8 @@ public class ConnectFourWidget extends JPanel implements SpotListener, ActionLis
 
 				player_color = Color.RED;
 				player_name = "Red";
-				next_player_name = "Black";
-				next_to_play = Player.BLACK;
+				next_player_name = "Blue";
+				next_to_play = Player.BLUE;
 			}
 
 			index = player_color;

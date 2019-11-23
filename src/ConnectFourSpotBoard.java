@@ -14,10 +14,9 @@ public class ConnectFourSpotBoard extends JPanel implements SpotBoard {
 	
 	private static final int DEFAULT_SCREEN_WIDTH = 600;
 	private static final int DEFAULT_SCREEN_HEIGHT = 600;
-	private static final Color DEFAULT_BACKGROUND_LIGHT = new Color(0.8f, 0.8f, 0.8f);
-	private static final Color DEFAULT_BACKGROUND_DARK = new Color(0.5f, 0.5f, 0.5f);
+	private static final Color DEFAULT_BACKGROUND_LIGHT = new Color(1.0f, 1.0f, 0.0f);
 	private static final Color DEFAULT_SPOT_COLOR = Color.GRAY;
-	private static final Color DEFAULT_HIGHLIGHT_COLOR = Color.YELLOW;
+	private static final Color DEFAULT_HIGHLIGHT_COLOR = Color.BLACK;
 
 	private Spot[][] _spots;
 	
@@ -34,7 +33,7 @@ public class ConnectFourSpotBoard extends JPanel implements SpotBoard {
 			
 			for (int x=0; x<width; x++) {
 				
-				Color bg = ((x%2) == 0) ? DEFAULT_BACKGROUND_LIGHT : DEFAULT_BACKGROUND_DARK;
+				Color bg = DEFAULT_BACKGROUND_LIGHT;
 				
 				_spots[x][y] = new JSpot(bg, DEFAULT_SPOT_COLOR, DEFAULT_HIGHLIGHT_COLOR, this, x, y);
 				((JSpot)_spots[x][y]).setPreferredSize(preferred_size);
